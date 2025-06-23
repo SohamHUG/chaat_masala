@@ -112,21 +112,53 @@ a {
     font-size: 36px;
 }
 
+.about-home {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: 2% auto;
+}
+
+.about-home-left,
+.about-home-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.about-home-right {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .about-home-title {
+    margin: 0;
     font-family: "Philosopher", sans-serif !important;
     font-weight: 400 !important;
     font-style: normal !important;
     font-size: 64px !important;
 }
 
-.about-home-text-left p {
+.about-home-text-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-home-text-left p,
+.about-home-right p,
+.about-home-right .tel {
     font-family: "Tiro Devanagari Hindi", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
+    margin: 1.7rem 0;
+    color: #000;
 }
 
 .about-home-text-left p span,
-.about-home-title span {
-    color: var(--primary-color)!important;
+.about-home-title span,
+.about-home-right .tel span {
+    color: var(--primary-color) !important;
 }

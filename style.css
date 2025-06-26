@@ -5,6 +5,10 @@
     --secondary-color: #725530;
 }
 
+.primary-color {
+    color: var(--primary-color);
+}
+
 .body {
     margin: 0 auto;
     width: 100%;
@@ -149,7 +153,8 @@ a {
 
 .cf .about-home-text-left p,
 .cf .about-home-right p,
-.cf .about-home-right .tel {
+.cf .about-home-right .tel,
+.about-cheffe-home-1-text p {
     font-family: "Tiro Devanagari Hindi", serif;
     font-weight: 400;
     font-style: normal;
@@ -186,4 +191,76 @@ a {
     .cf .about-home-right {
         align-items: flex-start;
     }
+}
+
+.about-cheffe-home {
+    width: 80%;
+}
+
+.title-1 {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    text-align: center;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.title-1::before,
+.title-1::after,
+.sub-title-1::before,
+.sub-title-1::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.sub-title-1 {
+    color: var(--secondary-color) !important;
+    font-family: "Philosopher", sans-serif !important;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem auto;
+    position: relative;
+    width: 30%;
+}
+
+.about-cheffe-home-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-cheffe-home-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-direction: column; */
+    width: 90%;
+}
+
+.img-cropper {
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin: 0 2em 0 0;
+    overflow: hidden;
+}
+
+.img-cropper img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    object-position: top;
 }

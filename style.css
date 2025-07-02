@@ -24,6 +24,80 @@ a {
     text-decoration: none;
 }
 
+.header {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    padding: .5rem;
+    transition: all 0.4s ease;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.4s ease;
+}
+
+.nav-link::before {
+    top: 0;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(0);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(0);
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+}
+
 .btn-1 {
     position: relative;
     overflow: hidden;
@@ -228,6 +302,10 @@ a {
     flex-direction: column;
 }
 
+.about-cheffe-home-content p {
+    text-align: start;
+}
+
 .about-cheffe-home-1,
 .about-cheffe-home-2 {
     display: flex;
@@ -266,6 +344,96 @@ a {
     text-align: center;
 }
 
+.footer {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.footer-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .nav-footer,
+.footer-container .lang {
+    flex: 1;
+}
+
+.footer-container .nav-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-container .nav-footer a {
+    color: #000;
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.footer-container .logo-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    /* Centre horizontalement */
+}
+
+.footer-container .logo-socials .logo {
+    margin: 0 0 1rem 0;
+}
+
+.footer-container .logo-socials .socials {
+    width: 100%;
+    text-align: center;
+    padding-bottom: .5rem;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+
+.footer-container .logo-socials .socials a {
+    color: #000;
+    margin: 0 .5rem;
+}
+
+.footer-container .lang {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-container .lang,
+.footer-container .lang a {
+    color: #000;
+    font-family: "Tiro Devanagari Hindi", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* text-decoration: underline; */
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+
+    .nav-link {
+        font-size: .9rem;
+        padding: .4rem;
+    }
+
+    .navbar {
+        width: 98%;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .cf .about-home,
@@ -291,7 +459,45 @@ a {
     }
 }
 
+@media screen and (max-width: 780px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .footer-container .logo-socials {
+        order: 1;
+    }
+
+    .footer-container .nav-footer {
+        order: 2;
+    }
+
+    .footer-container .lang {
+        order: 3;
+    }
+
+    .footer-container .nav-footer,
+    .footer-container .lang {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .navbar .logo {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 980px) {
+
+    .navbar .logo {
+        display: none;
+    }
 
     .about-cheffe-home-1,
     .about-cheffe-home-2 {

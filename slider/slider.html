@@ -6,17 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./slider.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="body cf">
     <h1>Le beau slider</h1>
     <div id="slider">
         <img src="https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000625-ca8ceca8d0/paneer%20tikka-53.webp?ph=8a89b29ad0"
-            alt="paneer tikka" id="slide">
+            alt="paneer tikka" id="slide" class="fade show">
 
-        <div id="slide-caption">
-            <h2 id="slide-title">Paneer Tikka</h2>
-            <p id="slide-desc">Un plat indien savoureux au fromage grillé.</p>
+        <div id="slide-caption" class="fade show">
+            <h2 id="slide-title">Sur place ou à emporter</h2>
+            <div id="slide-desc">
+                <p>
+                    Commandez du Lundi au Samedi de 9h à 21h. <br />
+                    Ouvert les Vendredis et Samedis soirs sur place. <br />
+                </p>
+                <button class="btn-1">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i> Voir plus
+                    </a>
+                </button>
+            </div>
+
         </div>
 
         <div id="precedent" onclick="ChangeSlide(-1)">

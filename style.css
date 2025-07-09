@@ -251,7 +251,13 @@ a {
     color: var(--primary-color) !important;
 }
 
-.about-cheffe-home {
+.menu .menu-header{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-cheffe-home,
+.menu {
     width: 80%;
     margin: 0 auto;
 }

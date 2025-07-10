@@ -30,7 +30,8 @@ a {
     text-decoration: none;
 }
 
-.s-c {
+.s-c,
+.b-s {
     padding: 0 !important;
 }
 

@@ -3,10 +3,16 @@
 :root {
     --primary-color: #BD9561;
     --secondary-color: #725530;
+    --container-max-width: 1200px;
 }
 
 .primary-color {
     color: var(--primary-color);
+}
+
+header.cf,
+footer.cf {
+    display: none!important;
 }
 
 .body {
@@ -429,6 +435,27 @@ a {
     /* text-decoration: underline; */
     font-size: 1rem;
 }
+
+/* Applique le max-width à tous les principaux conteneurs sauf #slider */
+/* .body, */
+.header,
+.navbar,
+.menu,
+.about-cheffe-home,
+.about-home,
+.footer-container {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Le slider reste full width */
+/* #slider {
+    max-width: none;
+    width: 100%;
+} */
 
 @media screen and (max-width: 540px) {
 

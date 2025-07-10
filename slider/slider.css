@@ -46,7 +46,7 @@
     opacity: 1;
 }
 
-.standard-caption{
+.standard-caption {
     position: absolute;
     top: 50%;
     left: 20%;
@@ -82,6 +82,11 @@
     height: 50px;
     margin: 2rem auto;
     color: #fff;
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne */
+    display: inline-flex;
+    /* Pour garder la mise en page flexible */
+    align-items: center;
 }
 
 .standard-caption a {
@@ -231,6 +236,7 @@
         align-items: center;
         justify-content: center;
     }
+
     .standard-caption a,
     .hero-slide a {
         font-size: 1rem;

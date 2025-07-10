@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+.s-c {
+    padding: 0 !important;
+}
+
 .header {
     width: 100%;
     height: 5em;

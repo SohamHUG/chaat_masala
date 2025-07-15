@@ -238,6 +238,11 @@ a {
     font-weight: 400 !important;
     font-style: normal !important;
     font-size: clamp(2rem, 5vw, 3.5rem) !important;
+    text-align: start;
+}
+
+.about-cheffe-home .about-home-title {
+    text-align: center;
 }
 
 .cf .about-home-text-left {

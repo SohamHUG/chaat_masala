@@ -195,7 +195,7 @@ a {
 }
 
 .hero-title {
-    font-size: 64px !important;
+    font-size: 4rem !important;
     font-weight: 400 !important;
     font-family: "Philosopher", sans-serif !important;
     font-weight: 400 !important;
@@ -213,7 +213,7 @@ a {
 .cf .about-home {
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 90%;
     margin: 2% auto;
     text-align: left;
 }
@@ -556,7 +556,9 @@ a {
 /* Responsive mobile */
 @media (max-width: 900px) {
     .about-cheffe-home-1,
-    .about-cheffe-home-2 {
+    .about-cheffe-home-2,
+    .about-home-left,
+    .about-home-right {
         flex-direction: column;
         gap: 1.2rem;
         max-width: 98vw;

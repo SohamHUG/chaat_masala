@@ -267,7 +267,7 @@ a {
     font-size: 1.5rem !important;
     margin: 1.7rem 0;
     color: #000;
-    line-height: 2rem!important;
+    line-height: 2rem !important;
 }
 
 .about-home-right img {
@@ -505,7 +505,7 @@ a {
     .cf .about-home-right {
         width: 100%;
         /* padding: 1rem; */
-        padding: 0;
+        padding: 0 15px;
     }
 
     .cf .about-home-title,
@@ -546,13 +546,6 @@ a {
     }
 }
 
-@media screen and (max-width: 900px) {
-
-    .navbar .logo {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 980px) {
 
     .navbar .logo {
@@ -573,6 +566,10 @@ a {
 
 /* Responsive mobile */
 @media (max-width: 900px) {
+
+    .navbar .logo {
+        display: none;
+    }
 
     .about-cheffe-home-1,
     .about-cheffe-home-2,

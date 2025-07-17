@@ -493,7 +493,7 @@ a {
 
 @media screen and (max-width: 768px) {
 
-    .cf .about-home,
+    .cf .about-home .about-home-content,
     .about-cheffe-home-1,
     .about-cheffe-home-2 {
         flex-direction: column;

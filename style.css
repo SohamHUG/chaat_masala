@@ -502,7 +502,9 @@ a {
     }
 
     .cf .about-home-left,
-    .cf .about-home-right {
+    .cf .about-home-right,
+    .about-cheffe-home-1,
+    .about-cheffe-home-2 {
         width: 100%;
         /* padding: 1rem; */
         padding: 0 15px;

@@ -30,7 +30,7 @@ const slides = [
 
     {
         isHero: true,
-        image: 'https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/img/naanwich.jpg',
+        image: 'https://raw.githubusercontent.com/SohamHUG/chaat_masala/cd2850ff683fc12c9504a7d524d646ed6c1aada0/img/naanwich.jpg',
         title: "SAVOUREUX",
         desc: `
         <p class="hero-sent">Jusqu'au bout des doigts</p>

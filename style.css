@@ -267,7 +267,7 @@ a {
     font-size: 1.5rem !important;
     margin: 1.7rem 0;
     color: #000;
-    line-height: 1.55rem!important;
+    line-height: 2rem!important;
 }
 
 .about-home-right img {
@@ -505,6 +505,7 @@ a {
     .cf .about-home-right {
         width: 100%;
         /* padding: 1rem; */
+        padding: 0;
     }
 
     .cf .about-home-title,

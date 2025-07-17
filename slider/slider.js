@@ -29,6 +29,15 @@ const slides = [
     },
 
     {
+        isHero: true,
+        image: 'https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/img/naanwich.jpg',
+        title: "SAVOUREUX",
+        desc: `
+        <p class="hero-sent">Jusqu'au bout des doigts</p>
+        `
+    },
+
+    {
         image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000819-11ebc11ebe/image-crop-200000644.webp?ph=8a89b29ad0", //karaoke
         title: "Karaoke familial",
         desc: `

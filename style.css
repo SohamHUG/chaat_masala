@@ -210,7 +210,12 @@ a {
     font-size: 36px;
 }
 
-.cf .about-home {
+.about-home {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.cf .about-home .about-home-content {
     display: flex;
     align-items: flex-start;
     width: 90%;
@@ -237,7 +242,7 @@ a {
     font-family: "Philosopher", sans-serif !important;
     font-weight: 400 !important;
     font-style: normal !important;
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
     text-align: start!important;
 }
 

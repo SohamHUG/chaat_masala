@@ -211,14 +211,14 @@ a {
 }
 
 .about-home {
-    width: 80%;
-    margin: 1rem auto;
+    width: 95%;
+    margin: 1rem auto 2.5rem auto;
 }
 
 .cf .about-home .about-home-content {
     display: flex;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
 }
@@ -243,7 +243,7 @@ a {
     font-weight: 400 !important;
     font-style: normal !important;
     font-size: 1.7rem !important;
-    text-align: start!important;
+    text-align: start !important;
 }
 
 .about-cheffe-home .about-home-title {
@@ -264,9 +264,10 @@ a {
     font-family: "Tiro Devanagari Hindi", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5rem!important;
+    font-size: 1.5rem !important;
     margin: 1.7rem 0;
     color: #000;
+    line-height: 1.55rem!important;
 }
 
 .about-home-right img {
@@ -290,7 +291,7 @@ a {
 
 .about-cheffe-home,
 .menu {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -334,7 +335,7 @@ a {
 }
 
 .about-cheffe-home-content {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -356,6 +357,7 @@ a {
     max-width: 1200px;
     margin: 1rem auto;
 }
+
 /* 
 .about-cheffe-home-1 .img-cropper {
     width: 70%;
@@ -372,7 +374,7 @@ a {
     min-width: 40%;
     height: auto;
     object-fit: cover;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     margin: 0;
 }
 
@@ -570,6 +572,7 @@ a {
 
 /* Responsive mobile */
 @media (max-width: 900px) {
+
     .about-cheffe-home-1,
     .about-cheffe-home-2,
     .about-home-left,
@@ -578,6 +581,7 @@ a {
         gap: 1.2rem;
         max-width: 98vw;
     }
+
     .about-cheffe-home-1 img,
     .about-cheffe-home-2 img {
         width: 80vw;
@@ -585,6 +589,7 @@ a {
         min-width: 120px;
         margin: 0 auto;
     }
+
     .about-cheffe-home-1-text,
     .about-cheffe-home-2-text {
         width: 100%;

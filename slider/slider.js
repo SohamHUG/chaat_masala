@@ -6,8 +6,8 @@ const slides = [
         desc: `
             <div class="hero">
                 <h2 class="hero-title">CHAAT MASALA</h2>
-                <p class="hero-sent">Une pincée d’Inde, un zeste de Réunion et uniquement du fait-maison</p>
-                <p class="hero-und">BAR NAAN / DOSA</p>
+                <p class="hero-sent">Restaurant, bar à naans, dosas</p>
+                <p class="hero-und">100% FAIT MAISON</p>
             </div>
         `
     },
@@ -57,7 +57,7 @@ const slides = [
         title: "Location de Salle",
         desc: `
         <p class="flex column min-gap">
-        Profitez d’un espace professionnel de 45 m², entièrement équipé, idéal pour vos formations, réunions ou ateliers. Disponible à l’heure, à la demi-journée ou à la journée
+        Votre espace professionnel de 45 m², entièrement équipé, à la demi-journée ou à la journée
 
         <span>
             <i class="fa-solid fa-users"></i> 17 personnes max

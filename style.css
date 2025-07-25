@@ -47,6 +47,7 @@ a {
     margin: 0 !important;
     left: 0;
     z-index: 10;
+    padding:0 2rem;
 }
 
 .navbar {
@@ -514,7 +515,7 @@ a {
     .cf .about-home-title,
     .about-cheffe-home-1-text p,
     .about-cheffe-home-2-text p {
-        text-align: center;
+        /* text-align: center; */
     }
 
     .cf .about-home-right {
@@ -563,7 +564,7 @@ a {
 
     .about-cheffe-home-1-text p,
     .about-cheffe-home-2-text p {
-        text-align: center;
+        /* text-align: center; */
     }
 }
 

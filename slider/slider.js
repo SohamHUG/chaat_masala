@@ -89,7 +89,7 @@ const slides = [
     },
 
     {
-        image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000851-8688a8688d/speed-dating.webp", //speed dating
+        image: "https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/slider/speed-dating.jpg", //speed dating
         title: "Speed Dating",
         desc: `
         <p>

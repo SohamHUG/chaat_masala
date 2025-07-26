@@ -10,20 +10,21 @@
     color: var(--primary-color);
 }
 
-header.cf,
 footer.cf {
     display: none !important;
 }
 
+
+
 .body {
-    margin: 0 auto;
+    /* margin: 0 auto;
     width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; */
 }
 
 a {
@@ -32,9 +33,23 @@ a {
 
 .s-c,
 .b-s {
-    padding: 0 !important;
+    /* padding: 0 !important; */
 }
 
+/*** navBar */
+.logo-block,
+#menu-slider,
+.cart-and-mobile {
+    display:none !important;
+}
+
+section.wnd-nav-sticky.s-hn.hm-hidden{
+    position: fixed !important;
+}
+    section.wnd-nav-sticky.s-hn.hm-hidden .s-w{
+        background-color: var(--primary-color);
+    }
+/*
 .header {
     width: 100%;
     height: 5em;
@@ -47,11 +62,11 @@ a {
     margin: 0 !important;
     left: 0;
     z-index: 10;
-    padding:0 2rem;
 }
+    */
 
 .navbar {
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,9 +117,18 @@ a {
     transform: scaleX(0);
 }
 
+.nav-link.current,
 .nav-link:hover {
     color: #000;
 }
+
+.nav-link.la-carte-sur-place{order:0;}
+.nav-link.tarifs-a-emporter{order:1;}
+.navbar .home{order:2;}
+.nav-link.la-carte{order:3;}
+.nav-link.contact{order:4;}
+
+
 
 .logo {
     font-size: 1.9rem;
@@ -211,6 +235,7 @@ a {
     font-size: 36px;
 }
 
+/*
 .about-home {
     width: 95%;
     margin: 1rem auto 2.5rem auto;
@@ -232,7 +257,6 @@ a {
 }
 
 .cf .about-home-right {
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,7 +278,6 @@ a {
 .cf .about-home-text-left {
     display: flex;
     flex-direction: column;
-    /* gap: .8rem!important; */
 }
 
 .cf .about-home-text-left p,
@@ -359,13 +382,7 @@ a {
     margin: 1rem auto;
 }
 
-/* 
-.about-cheffe-home-1 .img-cropper {
-    width: 70%;
-    aspect-ratio: 1/1;
-    margin: 0 2em 0 0;
-    overflow: hidden;
-} */
+
 
 .about-cheffe-home-1 img,
 .about-cheffe-home-2 img {
@@ -382,7 +399,7 @@ a {
 .about-cheffe-home-content .hero-title {
     text-align: center;
 }
-
+*/
 .footer {
     width: 100%;
     min-height: 10em;
@@ -392,7 +409,7 @@ a {
 }
 
 .footer-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -424,7 +441,6 @@ a {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    /* Centre horizontalement */
 }
 
 .footer-container .logo-socials .logo {
@@ -437,6 +453,13 @@ a {
     padding-bottom: .5rem;
     font-size: 2rem;
     border-bottom: 1px solid var(--secondary-color);
+}
+
+.footer-container .logo-socials p {
+    font-size:0.8rem;
+}
+.footer-container .logo-socials p.logo {
+    font-size:1.9rem;
 }
 
 
@@ -457,12 +480,9 @@ a {
     font-family: "Tiro Devanagari Hindi", serif;
     font-weight: 400;
     font-style: normal;
-    /* text-decoration: underline; */
     font-size: 1rem;
 }
-
-/* Applique le max-width à tous les principaux conteneurs sauf #slider */
-/* .body, */
+/*
 .header,
 .navbar,
 .menu,
@@ -476,24 +496,15 @@ a {
     box-sizing: border-box;
 }
 
-/* Le slider reste full width */
-/* #slider {
-    max-width: none;
-    width: 100%;
-} */
-
+*/
 @media screen and (max-width: 540px) {
 
     .nav-link {
         font-size: .9rem;
         padding: .4rem;
     }
-
-    .navbar {
-        width: 98%;
-    }
 }
-
+/*
 @media screen and (max-width: 768px) {
 
     .cf .about-home .about-home-content,
@@ -508,21 +519,20 @@ a {
     .about-cheffe-home-2,
     .about-cheffe-home .about-home-title {
         width: 100%;
-        /* padding: 1rem; */
         padding: 0 15px;
     }
 
     .cf .about-home-title,
     .about-cheffe-home-1-text p,
     .about-cheffe-home-2-text p {
-        /* text-align: center; */
+        text-align: center;
     }
 
     .cf .about-home-right {
         align-items: flex-start;
     }
 }
-
+*/
 @media screen and (max-width: 780px) {
 
     .footer-container {
@@ -550,12 +560,13 @@ a {
     }
 }
 
+
 @media screen and (max-width: 980px) {
 
     .navbar .logo {
         display: none;
     }
-
+/*
     .about-cheffe-home-1,
     .about-cheffe-home-2 {
         flex-direction: column;
@@ -564,11 +575,11 @@ a {
 
     .about-cheffe-home-1-text p,
     .about-cheffe-home-2-text p {
-        /* text-align: center; */
+        text-align: center;
     }
+        */
 }
-
-/* Responsive mobile */
+/*
 @media (max-width: 900px) {
 
     .navbar .logo {
@@ -598,3 +609,4 @@ a {
         min-width: unset;
     }
 }
+    */

@@ -28,6 +28,7 @@ const observerMenu = new MutationObserver(() => {
 
             // Extraire la dernière partie du href pour l'ajouter en classe
             const href = link.getAttribute("href");
+            console.log(href);
             const url = new URL(href);
             let slug = url.pathname.replace(/^\/|\/$/g, ""); // Supprimer les "/" de début/fin
 
@@ -47,7 +48,6 @@ const observerMenu = new MutationObserver(() => {
             } else {
                 newLink.textContent = link.textContent.trim();
             }
-
             // Ajouter au <nav>
             nav.appendChild(newLink);
         });

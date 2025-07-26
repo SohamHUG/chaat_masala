@@ -43,10 +43,11 @@ a {
     display:none !important;
 }
 
-section.wnd-nav-sticky.s-hn.hm-hidden{
+
+section.wnd-nav-border.s-hn.hm-hidden{
     position: fixed !important;
 }
-    section.wnd-nav-sticky.s-hn.hm-hidden .s-w{
+    section.wnd-nav-border.s-hn.hm-hidden .s-w{
         background-color: var(--primary-color);
     }
 /*
@@ -70,7 +71,7 @@ section.wnd-nav-sticky.s-hn.hm-hidden{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin: 0.2rem 0 0 0;
 }
 
 .nav-link {

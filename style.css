@@ -16,70 +16,47 @@ footer.cf {
 }
 
 
-
-.body {
-    /* margin: 0 auto;
-    width: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; */
-}
-
 a {
     text-decoration: none;
 }
 
-.s-c,
-.b-s {
-    /* padding: 0 !important; */
-}
-
 /*** navBar */
-.logo-block,
-#menu-slider,
-.cart-and-mobile {
+.logo-block {
     display:none !important;
 }
 
-/*
-section.wnd-nav-border.s-hn.hm-hidden{
-    position: fixed !important;
-}
-    section.wnd-nav-border.s-hn.hm-hidden .s-w,
-    .wnd-page:not(.ac-none) .s.sc-acl .s-bg{
-        background-color: var(--primary-color);
+@media screen and (max-width: 56.2437em) {
+    .logo-block {
+        display:block !important;
+        width: 100%;
     }
-
-    
-.header {
-    width: 100%;
-    height: 5em;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary-color);
-    max-width: 100% !important;
-    margin: 0 !important;
-    left: 0;
-    z-index: 10;
-}
-    */
-
-.navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0.2rem 0 0 0;
 }
 
-.nav-link {
+.logo-block span{
+    color:#000 !important;
+    font-size:1.75rem !important;
+}
+
+#menu-slider{
+    width: 100%;
+}
+#menu-block{
+    display: flex;
+    width: 100%;
+}
+#menu{width: 100%;}
+#menu ul{
+    justify-content: space-between !important;
+}
+
+
+
+#menu li a{
+    border:none;
+}
+#menu ul li a{
     font-size: 1.3rem;
-    color: #fff;
+    color:#fff;
     font-family: "Philosopher", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -90,8 +67,13 @@ section.wnd-nav-border.s-hn.hm-hidden{
     transition: all 0.4s ease;
 }
 
-.nav-link::before,
-.nav-link::after {
+#menu ul li a span{
+    padding: 0.7rem 0 !important;
+}
+
+#menu ul li a span::before,
+#menu ul li a span::after
+{
     content: '';
     position: absolute;
     left: 0;
@@ -101,46 +83,55 @@ section.wnd-nav-border.s-hn.hm-hidden{
     transition: transform 0.4s ease;
 }
 
-.nav-link::before {
+#menu ul li a span::before {
     top: 0;
     transform: scaleX(1);
     transform-origin: right;
 }
 
-.nav-link::after {
+#menu ul li a span::after {
     bottom: 0;
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.nav-link:hover::before {
+#menu ul li a span:hover::before {
     transform: scaleX(0);
 }
 
-.nav-link:hover::after {
+#menu ul li a span:hover::after {
     transform: scaleX(0);
 }
 
-.nav-link.current,
-.nav-link:hover {
+#menu ul li.wnd-active a {
     color: #000;
 }
 
-.nav-link.la-carte-sur-place{order:0;}
-.nav-link.tarifs-a-emporter{order:1;}
-.navbar .home{order:2;}
-.nav-link.la-carte{order:3;}
-.nav-link.contact{order:4;}
-
-
-
-.logo {
+#menu ul li:nth-child(1) a{
     font-size: 1.9rem;
     font-family: "Philosopher", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #000;
 }
+
+#menu ul li:nth-child(1) a span::before,
+#menu ul li:nth-child(1) a span::after{
+    width: 0;
+    height: 0;
+}
+
+
+#menu ul li:nth-child(1){order: 2;}
+#menu ul li:nth-child(2){order: 0;}
+#menu ul li:nth-child(3){order: 1;}
+#menu ul li:nth-child(4){order: 3;}
+#menu ul li:nth-child(5){order: 4;}
+
+
+
+
+
 
 .btn-1 {
     /* display: inline-block; */
@@ -209,6 +200,10 @@ section.wnd-nav-border.s-hn.hm-hidden{
     color: var(--primary-color);
 }
 
+
+
+
+
 .hero {
     width: 100%;
     height: 100vh;
@@ -239,171 +234,9 @@ section.wnd-nav-border.s-hn.hm-hidden{
     font-size: 36px;
 }
 
-/*
-.about-home {
-    width: 95%;
-    margin: 1rem auto 2.5rem auto;
-}
-
-.cf .about-home .about-home-content {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.cf .about-home-left,
-.cf .about-home-right {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 0 2rem;
-}
-
-.cf .about-home-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cf .about-home-title {
-    margin: 0;
-    font-family: "Philosopher", sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 1.7rem !important;
-    text-align: start !important;
-}
-
-.about-cheffe-home .about-home-title {
-    text-align: center;
-}
-
-.cf .about-home-text-left {
-    display: flex;
-    flex-direction: column;
-}
-
-.cf .about-home-text-left p,
-.cf .about-home-right p,
-.cf .about-home-right .tel,
-.about-cheffe-home-1-text p,
-.about-cheffe-home-2-text p {
-    font-family: "Tiro Devanagari Hindi", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem !important;
-    margin: 1.7rem 0;
-    color: #000;
-    line-height: 2rem !important;
-}
-
-.about-home-right img {
-    max-width: 100%;
-}
-
-.cf .about-home-text-left p span,
-.cf .about-home-title span,
-.cf .about-home-right .tel span {
-    color: var(--primary-color) !important;
-}
-
-.about-home-right .btn-1 {
-    font-size: 2rem;
-}
-
-.menu .menu-header {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.about-cheffe-home,
-.menu {
-    width: 95%;
-    margin: 0 auto;
-}
-
-.title-1 {
-    font-family: "Philosopher", sans-serif;
-    font-weight: 600;
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    text-align: center;
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 0;
-    position: relative;
-    width: 100%;
-}
-
-.title-1::before,
-.title-1::after,
-.sub-title-1::before,
-.sub-title-1::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid var(--secondary-color);
-}
-
-.sub-title-1 {
-    color: var(--secondary-color) !important;
-    font-family: "Philosopher", sans-serif !important;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1rem auto;
-    position: relative;
-    width: 80%;
-}
-
-.about-cheffe-home-content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-.about-cheffe-home-content p {
-    text-align: start;
-}
-
-.about-cheffe-home-1,
-.about-cheffe-home-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 1rem auto;
-}
 
 
 
-.about-cheffe-home-1 img,
-.about-cheffe-home-2 img {
-    display: block;
-    width: 40%;
-    max-width: 40%;
-    min-width: 40%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    margin: 0;
-}
-
-.about-cheffe-home-content .hero-title {
-    text-align: center;
-}
-*/
 .footer {
     width: 100%;
     min-height: 10em;
@@ -486,57 +319,7 @@ section.wnd-nav-border.s-hn.hm-hidden{
     font-style: normal;
     font-size: 1rem;
 }
-/*
-.header,
-.navbar,
-.menu,
-.about-cheffe-home,
-.about-home,
-.footer-container {
-    max-width: var(--container-max-width);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    box-sizing: border-box;
-}
 
-*/
-@media screen and (max-width: 540px) {
-
-    .nav-link {
-        font-size: .9rem;
-        padding: .4rem;
-    }
-}
-/*
-@media screen and (max-width: 768px) {
-
-    .cf .about-home .about-home-content,
-    .about-cheffe-home-1,
-    .about-cheffe-home-2 {
-        flex-direction: column;
-    }
-
-    .cf .about-home-left,
-    .cf .about-home-right,
-    .about-cheffe-home-1,
-    .about-cheffe-home-2,
-    .about-cheffe-home .about-home-title {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .cf .about-home-title,
-    .about-cheffe-home-1-text p,
-    .about-cheffe-home-2-text p {
-        text-align: center;
-    }
-
-    .cf .about-home-right {
-        align-items: flex-start;
-    }
-}
-*/
 @media screen and (max-width: 780px) {
 
     .footer-container {
@@ -564,53 +347,3 @@ section.wnd-nav-border.s-hn.hm-hidden{
     }
 }
 
-
-@media screen and (max-width: 980px) {
-
-    .navbar .logo {
-        display: none;
-    }
-/*
-    .about-cheffe-home-1,
-    .about-cheffe-home-2 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-cheffe-home-1-text p,
-    .about-cheffe-home-2-text p {
-        text-align: center;
-    }
-        */
-}
-/*
-@media (max-width: 900px) {
-
-    .navbar .logo {
-        display: none;
-    }
-
-    .about-cheffe-home-1,
-    .about-cheffe-home-2,
-    .about-home-left,
-    .about-home-right {
-        flex-direction: column;
-        gap: 1.2rem;
-        max-width: 98vw;
-    }
-
-    .about-cheffe-home-1 img,
-    .about-cheffe-home-2 img {
-        width: 80vw;
-        max-width: 95vw;
-        min-width: 120px;
-        margin: 0 auto;
-    }
-
-    .about-cheffe-home-1-text,
-    .about-cheffe-home-2-text {
-        width: 100%;
-        min-width: unset;
-    }
-}
-    */

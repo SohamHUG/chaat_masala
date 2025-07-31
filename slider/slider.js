@@ -9,7 +9,7 @@ const slides = [
                 <p class="hero-sent">Restaurant, bar à naans, dosas</p>
                 <p class="hero-und">100% FAIT MAISON</p>
             </div>
-        `
+        `,
     },
 
     {
@@ -25,16 +25,16 @@ const slides = [
                 <i class="fa-solid fa-arrow-right-long"></i> Voir plus
             </a>
         </button>
-        `
+        `,
     },
 
     {
         isHero: true,
-        image: 'https://raw.githubusercontent.com/SohamHUG/chaat_masala/cd2850ff683fc12c9504a7d524d646ed6c1aada0/img/naanwich.jpg',
+        image: "https://raw.githubusercontent.com/SohamHUG/chaat_masala/cd2850ff683fc12c9504a7d524d646ed6c1aada0/img/naanwich.jpg",
         title: "SAVOUREUX",
         desc: `
         <p class="hero-sent">Jusqu'au bout des doigts</p>
-        `
+        `,
     },
 
     {
@@ -58,7 +58,7 @@ const slides = [
                 <i class="fa-solid fa-arrow-right-long"></i> Voir plus
             </a>
         </button>
-        `
+        `,
     },
 
     {
@@ -85,7 +85,7 @@ const slides = [
                 <i class="fa-solid fa-arrow-right-long"></i> Voir plus
             </a>
         </button>
-        `
+        `,
     },
 
     {
@@ -95,8 +95,8 @@ const slides = [
         <p>
             Rencontrez de nouvelles personnes en un temps limité.
         </p>
-        `
-    }
+        `,
+    },
 ];
 
 let numero = 0;
@@ -150,7 +150,9 @@ function ChangeSlide(sens = 1) {
         } else {
             caption.classList.add("standard-caption");
             caption.classList.remove("hero-slide");
-            document.getElementById("slide-title").classList.remove("hero-title");
+            document
+                .getElementById("slide-title")
+                .classList.remove("hero-title");
         }
 
         document.getElementById("slide-title").textContent = slide.title || "";
@@ -186,25 +188,32 @@ function setupSwipe() {
 
 // Hide arrows on mobile
 function handleArrowVisibility() {
-    const arrows = [document.getElementById("precedent"), document.getElementById("suivant")];
+    const arrows = [
+        document.getElementById("precedent"),
+        document.getElementById("suivant"),
+    ];
     const isMobile = window.innerWidth <= 768;
-    arrows.forEach(arrow => arrow.style.display = isMobile ? "none" : "block");
+    arrows.forEach(
+        (arrow) => (arrow.style.display = isMobile ? "none" : "block")
+    );
 }
 
 window.addEventListener("resize", handleArrowVisibility);
 
 // Supprimez l'appel initial ChangeSlide(0) et remplacez-le par :
 document.addEventListener("DOMContentLoaded", () => {
-    const slide = slides[0];
-    document.getElementById("slide-title").textContent = slide.title || "";
-    document.getElementById("slide-desc").innerHTML = slide.desc;
-    slideImg.src = slide.image;
-    updateProgressBars();
+    if (document.getElementById("slider")) {
+        const slide = slides[0];
+        document.getElementById("slide-title").textContent = slide.title || "";
+        document.getElementById("slide-desc").innerHTML = slide.desc;
+        slideImg.src = slide.image;
+        updateProgressBars();
 
-    // Première fois : interval à 9s, puis 6s pour la suite
-    resetInterval(9000);
-    firstSlideShown = true;
+        // Première fois : interval à 9s, puis 6s pour la suite
+        resetInterval(9000);
+        firstSlideShown = true;
 
-    setupSwipe();
-    handleArrowVisibility();
+        setupSwipe();
+        handleArrowVisibility();
+    }
 });

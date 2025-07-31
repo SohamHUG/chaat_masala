@@ -99,6 +99,59 @@ const slides = [
     },
 ];
 
+const slidesPresta = [
+    {
+        image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000819-11ebc11ebe/image-crop-200000644.webp?ph=8a89b29ad0", //karaoke
+        title: "Karaoke familial",
+        desc: `
+        <p class="flex column min-gap">
+        Privatisez notre restaurant pour un karaoké en famille ou entre ami(e)s pour 3h30
+        <span>
+            <i class="fas fa-user-tag"></i> 28€ par personne
+        </span>
+        <span>
+            <i class="fa-solid fa-users"></i> 8 à 18 personnes max
+        </span>
+        <span>
+            <i class="fa-solid fa-calendar-days"></i> Vendredi ou Samedi
+            <i class="fa-solid fa-clock"></i> 19h-22h30
+        </p>
+        <button class="btn-1">
+            <a href="https://www.chaatmasalarestoindien.com/karaoke-familial-12-a-18-pers/">
+                <i class="fa-solid fa-arrow-right-long"></i> Voir plus
+            </a>
+        </button>
+        `,
+    },
+
+    {
+        image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000661-6358e63590/image-crop-200000656-8.webp?ph=8a89b29ad0", //location salle
+        title: "Location de Salle",
+        desc: `
+        <p class="flex column min-gap">
+        Votre espace professionnel de 45 m², entièrement équipé, à la demi-journée ou à la journée
+
+        <span>
+            <i class="fa-solid fa-users"></i> 17 personnes max
+            <i class="fa-solid fa-clock"></i> Tarif dégressif
+        </span>
+        <span>
+            <i class="fa-solid fa-video"></i> Rétroprojecteur à disposition
+            
+        </span>
+        <span>
+            <i class="fa-solid fa-wifi"></i> Connexion internet Wi-Fi
+        </span>
+        </p>
+        <button class="btn-1">
+            <a href="https://www.chaatmasalarestoindien.com/location-de-salle/">
+                <i class="fa-solid fa-arrow-right-long"></i> Voir plus
+            </a>
+        </button>
+        `,
+    },
+];
+
 let numero = 0;
 let intervalID;
 let firstSlideShown = false;
@@ -112,12 +165,21 @@ const progressContainer = document.getElementById("slide-progress");
 
 function updateProgressBars() {
     progressContainer.innerHTML = "";
-    slides.forEach((_, index) => {
-        const bar = document.createElement("div");
-        bar.classList.add("progress-bar");
-        if (index === numero) bar.classList.add("active");
-        progressContainer.appendChild(bar);
-    });
+    if (document.getElementById("slider").classList.contains("prestations")) {
+        slidesPresta.forEach((_, index) => {
+            const bar = document.createElement("div");
+            bar.classList.add("progress-bar");
+            if (index === numero) bar.classList.add("active");
+            progressContainer.appendChild(bar);
+        });
+    } else {
+        slides.forEach((_, index) => {
+            const bar = document.createElement("div");
+            bar.classList.add("progress-bar");
+            if (index === numero) bar.classList.add("active");
+            progressContainer.appendChild(bar);
+        });
+    }
 }
 
 function resetInterval(delay) {
@@ -137,8 +199,17 @@ function ChangeSlide(sens = 1) {
     caption.classList.remove("show");
 
     setTimeout(() => {
-        numero = (numero + sens + slides.length) % slides.length;
-        const slide = slides[numero];
+        let slide;
+        if (
+            document.getElementById("slider").classList.contains("prestations")
+        ) {
+            numero =
+                (numero + sens + slidesPresta.length) % slidesPresta.length;
+            slide = slidesPresta[numero];
+        } else {
+            numero = (numero + sens + slides.length) % slides.length;
+            slide = slides[numero];
+        }
 
         slideImg.dataset.loaded = "true";
         slideImg.src = slide.image;
@@ -203,7 +274,14 @@ window.addEventListener("resize", handleArrowVisibility);
 // Supprimez l'appel initial ChangeSlide(0) et remplacez-le par :
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("slider")) {
-        const slide = slides[0];
+        let slide;
+        if (
+            document.getElementById("slider").classList.contains("prestations")
+        ) {
+            slide = slidesPresta[0];
+        } else {
+            slide = slides[0];
+        }
         document.getElementById("slide-title").textContent = slide.title || "";
         document.getElementById("slide-desc").innerHTML = slide.desc;
         slideImg.src = slide.image;

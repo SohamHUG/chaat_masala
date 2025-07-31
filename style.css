@@ -11,8 +11,8 @@
     color: var(--primary-color);
 }
 
-footer.cf {
-    display: none !important;
+.s-c.s-fs.cf{
+    padding: 0 !important;
 }
 
 
@@ -25,16 +25,14 @@ a {
     display:none !important;
 }
 
-@media screen and (max-width: 56.2437em) {
-    .logo-block {
-        display:block !important;
-        width: 100%;
-    }
-}
 
-.logo-block span{
-    color:#000 !important;
-    font-size:1.75rem !important;
+.logo-block span,
+#menu ul li:nth-child(1) a{
+    font-size: 1.9rem;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
 }
 
 #menu-slider{
@@ -107,13 +105,7 @@ a {
     color: #000;
 }
 
-#menu ul li:nth-child(1) a{
-    font-size: 1.9rem;
-    font-family: "Philosopher", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #000;
-}
+
 
 #menu ul li:nth-child(1) a span::before,
 #menu ul li:nth-child(1) a span::after{
@@ -130,7 +122,22 @@ a {
 
 
 
+@media screen and (max-width: 56.2437em) {
+    .logo-block {
+        display:block !important;
+        width: 100%;
+    }
 
+    #menu-slider{
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .logo-block span{
+        font-size: 1.5rem;
+    }
+}
 
 
 .btn-1 {
@@ -236,6 +243,10 @@ a {
 
 
 
+
+footer.cf {
+    display: none !important;
+}
 
 .footer {
     width: 100%;

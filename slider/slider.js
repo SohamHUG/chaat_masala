@@ -35,7 +35,7 @@ const slides = [
         desc: `
         <p class="hero-sent">Jusqu'au bout des doigts</p>
         `,
-    },   
+    },
 ];
 
 const slidesPresta = [
@@ -87,7 +87,7 @@ const slidesPresta = [
         `,
     },
 
-     {
+    {
         image: "https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/slider/speed-dating.jpg", //speed dating
         title: "Speed Dating",
         desc: `
@@ -243,42 +243,3 @@ document.addEventListener("DOMContentLoaded", () => {
         handleArrowVisibility();
     }
 });
-
-
-<div id="slider" class="prestations">
-<img src="https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000819-11ebc11ebe/image-crop-200000644.webp?ph=8a89b29ad0" alt="image slider" id="slide" class="fade show" data-loaded="true">
-
-<div id="slide-caption" class="fade show hero-slide">
-<h2 id="slide-title" class="hero-title">Karaoke familial</h2>
-<div id="slide-desc">
-<p class="flex column min-gap">
-Privatisez notre restaurant pour un karaoké en famille ou entre ami(e)s pour 3h30
-<span>
-<i class="fas fa-user-tag"></i> 28€ par personne
-</span>
-<span>
-<i class="fa-solid fa-users"></i> 8 à 18 personnes max
-</span>
-<span>
-<i class="fa-solid fa-calendar-days"></i> Vendredi ou Samedi
-<i class="fa-solid fa-clock"></i> 19h-22h30
-</span></p>
-<button class="btn-1">
-<a href="https://www.chaatmasalarestoindien.com/karaoke-familial-12-a-18-pers/">
-<i class="fa-solid fa-arrow-right-long"></i> Voir plus
-</a>
-</button>
-</div>
-
-</div>
-
-<div id="precedent" onclick="ChangeSlide(-1)">
-&lt;
-</div>
-<div id="suivant" onclick="ChangeSlide(1)">
-&gt;
-</div>
-
-<div id="slide-progress" class="progress-container"></div>
-
-</div>

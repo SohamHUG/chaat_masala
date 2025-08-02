@@ -35,68 +35,7 @@ const slides = [
         desc: `
         <p class="hero-sent">Jusqu'au bout des doigts</p>
         `,
-    },
-
-    {
-        image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000819-11ebc11ebe/image-crop-200000644.webp?ph=8a89b29ad0", //karaoke
-        title: "Karaoke familial",
-        desc: `
-        <p class="flex column min-gap">
-        Privatisez notre restaurant pour un karaoké en famille ou entre ami(e)s pour 3h30
-        <span>
-            <i class="fas fa-user-tag"></i> 28€ par personne
-        </span>
-        <span>
-            <i class="fa-solid fa-users"></i> 8 à 18 personnes max
-        </span>
-        <span>
-            <i class="fa-solid fa-calendar-days"></i> Vendredi ou Samedi
-            <i class="fa-solid fa-clock"></i> 19h-22h30
-        </p>
-        <button class="btn-1">
-            <a href="https://www.chaatmasalarestoindien.com/karaoke-familial-12-a-18-pers/">
-                <i class="fa-solid fa-arrow-right-long"></i> Voir plus
-            </a>
-        </button>
-        `,
-    },
-
-    {
-        image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000661-6358e63590/image-crop-200000656-8.webp?ph=8a89b29ad0", //location salle
-        title: "Location de Salle",
-        desc: `
-        <p class="flex column min-gap">
-        Votre espace professionnel de 45 m², entièrement équipé, à la demi-journée ou à la journée
-
-        <span>
-            <i class="fa-solid fa-users"></i> 17 personnes max
-            <i class="fa-solid fa-clock"></i> Tarif dégressif
-        </span>
-        <span>
-            <i class="fa-solid fa-video"></i> Rétroprojecteur à disposition
-            
-        </span>
-        <span>
-            <i class="fa-solid fa-wifi"></i> Connexion internet Wi-Fi
-        </span>
-        </p>
-        <button class="btn-1">
-            <a href="https://www.chaatmasalarestoindien.com/location-de-salle/">
-                <i class="fa-solid fa-arrow-right-long"></i> Voir plus
-            </a>
-        </button>
-        `,
-    },
-
-    {
-        image: "https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/slider/speed-dating.jpg", //speed dating
-        title: "Speed Dating",
-        desc: `
-        <p>
-            Rencontrez de nouvelles personnes en un temps limité.
-        </p>
-        `,
-    },
+    },   
 ];
 
 const slidesPresta = [
@@ -107,10 +46,7 @@ const slidesPresta = [
         <p class="flex column min-gap">
         Privatisez notre restaurant pour un karaoké en famille ou entre ami(e)s pour 3h30
         <span>
-            <i class="fas fa-user-tag"></i> 28€ par personne
-        </span>
-        <span>
-            <i class="fa-solid fa-users"></i> 8 à 18 personnes max
+            <i class="fa-solid fa-users"></i> 16 personnes max
         </span>
         <span>
             <i class="fa-solid fa-calendar-days"></i> Vendredi ou Samedi
@@ -150,7 +86,19 @@ const slidesPresta = [
         </button>
         `,
     },
+
+     {
+        image: "https://raw.githubusercontent.com/SohamHUG/chaat_masala/refs/heads/main/slider/speed-dating.jpg", //speed dating
+        title: "Speed Dating",
+        desc: `
+        <p>
+            Rencontrez de nouvelles personnes en un temps limité.
+        </p>
+        `,
+    },
 ];
+
+slides = slides.concat(slidesPresta);
 
 let numero = 0;
 let intervalID;
@@ -295,3 +243,42 @@ document.addEventListener("DOMContentLoaded", () => {
         handleArrowVisibility();
     }
 });
+
+
+<div id="slider" class="prestations">
+<img src="https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000819-11ebc11ebe/image-crop-200000644.webp?ph=8a89b29ad0" alt="image slider" id="slide" class="fade show" data-loaded="true">
+
+<div id="slide-caption" class="fade show hero-slide">
+<h2 id="slide-title" class="hero-title">Karaoke familial</h2>
+<div id="slide-desc">
+<p class="flex column min-gap">
+Privatisez notre restaurant pour un karaoké en famille ou entre ami(e)s pour 3h30
+<span>
+<i class="fas fa-user-tag"></i> 28€ par personne
+</span>
+<span>
+<i class="fa-solid fa-users"></i> 8 à 18 personnes max
+</span>
+<span>
+<i class="fa-solid fa-calendar-days"></i> Vendredi ou Samedi
+<i class="fa-solid fa-clock"></i> 19h-22h30
+</span></p>
+<button class="btn-1">
+<a href="https://www.chaatmasalarestoindien.com/karaoke-familial-12-a-18-pers/">
+<i class="fa-solid fa-arrow-right-long"></i> Voir plus
+</a>
+</button>
+</div>
+
+</div>
+
+<div id="precedent" onclick="ChangeSlide(-1)">
+&lt;
+</div>
+<div id="suivant" onclick="ChangeSlide(1)">
+&gt;
+</div>
+
+<div id="slide-progress" class="progress-container"></div>
+
+</div>

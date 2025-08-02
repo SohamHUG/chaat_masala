@@ -1,4 +1,4 @@
-const slides = [
+let slides = [
     {
         isHero: true,
         image: "https://8a89b29ad0.clvaw-cdnwnd.com/3aee5f6e285cf7d73d2016c7bb4c061b/200000839-72e8a72e8c/pexels-saveurssecretes-7625056.webp?ph=8a89b29ad0",
